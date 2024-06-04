@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url('/public/light-blue-gradient.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: -10px -10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+	border: solid 1px gray;
+	border-radius: 8px;
+	width: 100px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px;
+	font-size: 11pt;
+	font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover:enabled {
+	background-color: lightgray;
+	cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.errorMessage {
+	display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-container {
+	display: flex;
+	flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-container {
+	height: 50vh;
+	width: 50vh;
+	border: solid 1px gray;
+	border-radius: 20px;
+	background-color: rgba(128, 128, 128, 0.46);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	border: solid 1px gray;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 5px;
+}
+
+input:invalid[focused='true'] ~ span {
+	display: block;
+}
+
+input:invalid[focused='true'] {
+	border: solid 1px red;
+}
+
+input:focus {
+	outline: none;
+}
+
+.image {
+	margin: 2px;
+}
+
+.title {
+	margin: 0px;
+}
+
+.submitMessage {
+	margin-bottom: 15px;
+	font-size: 14pt;
 }
