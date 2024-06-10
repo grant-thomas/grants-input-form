@@ -45,7 +45,6 @@ function App() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setIsSubmitting(true);
-		console.log(values);
 
 		resetForm();
 
@@ -59,8 +58,6 @@ function App() {
 
 		if (e.target.checkValidity())
 			setIsValid({ ...isValid, [e.target.name]: 'true' });
-
-		console.log(isValid);
 	};
 
 	const handleFocus = (e) => {
