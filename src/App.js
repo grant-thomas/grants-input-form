@@ -99,7 +99,7 @@ function App() {
 								value={values.email}
 								onChange={handleChange}
 								required={true}
-								pattern='/^[A-Z0-9. _%+-]+@[A-Z0-9. -]+\. [A-Z]{2,}$/i'
+								pattern='^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
 								onBlur={handleFocus}
 								focused={showError.email.toString()}></input>
 							<span className='errorMessage'>Please enter a valid email.</span>
